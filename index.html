@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>KUSHAL MATALIA</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+<body>
+
+	<div class="background">
+		<div class="nav">
+			<a class="a active" href="#">HOME</a>
+			<a class="b" href="#">ABOUT ME</a>
+			<a class="c" href="#">GALLERY</a>
+			<a class="d" href="#">CONTACT ME</a>
+		</div>
+
+	<div class="content">
+		<div class="home">
+			<h1>Kushal Matalia</h1>
+			<h3>Computer Engineer</h3>
+		</div>
+
+		<div class="aboutme">
+			<p>Hello Friends,<br>
+			Welcome to my Portfolio.<br>
+			I AM CURRENTLY PURSUING MY BTECH FROM SRM INSTITUTE OF SCIENCE AND TECHNOLOGY IN INFORMATION TECHNOLOGY WITH A STANDING CGPA OF 8.92. I DID MY SCHOOLING AT DELHI PUBLIC SCHOOL DHANBAD. I OBTAINED A CGPA OF 9.6 IN MONTH AND SCORED AN AGGREGATE OF 86.4% in 12TH STANDARD.  I WAS A PART OF MY SCHOOL’S INTERACT CLUB FOR THE FY 2013-14 AND WAS ELECTED AS THE TREASURER OF THE CLUB.
+MY AREAS OF INTEREST LIES IN MACHINE LEARNING, DATA SCIENCE AND APPLICATION DEVELOPMENT(WEB AND JAVA), I'M PROFICIENT IN PROGRAMMING LANGUAGES LIKE C, C++, JAVA AND PYTHON.
+IN THE RECENT YEARS OF MY EDUCATION I'VE BEEN ABLE TO COMBINE MY TECHNICAL SKILLS WITH THE HANDS-ON EXPERIENCE ATTAINED BY PARTICIPATING IN VARIOUS TEAMS AND CLUBS. APART FROM THIS I UNDERWENT AN IN-PLANT TRAINING AT SRIJAN SERVICES AS AN APPLICATION DEVELOPER.
+I AM A PERSON WITH DIVERSE SKILL SET, I'M ADAPTABLE, DETERMINED, ORGANIZED AND A QUICK LEARNER  
+I AM VERY PASSIONATE ABOUT MY GOAL AND AM CONFIDENT TO ACCOMMODATE MYSELF IN ANY SITUATION AS A GOOD TEAM PLAYER.
+</p>
+		</div>
+
+		<div class="gallery">
+			<div class="image">
+				<img src="images/ku.jpg">
+			</div>
+			<div class="image">
+				<img src="images/kush.jpg">
+			</div>
+			<div class="image">
+				<img src="images/kushal1.jpg">
+			</div>
+			<div class="image">
+				<img src="images/kus1.jpg">
+			</div>
+		</div>
+
+		<div class="contactme">
+			<div class="contactform">
+				<form action="index.html" method="post">
+					<input type="text" name="" class="inputtext" placeholder="First Name">
+					<input type="text" name="" class="inputtext" placeholder="Last Name">
+					<input type="text" name="" class="inputtext" placeholder="Email">
+					<textarea cols="4" rows="6" class="inputmessage" placeholder="Your Message.."></textarea>
+					<input type="button" class="submitbutton" name="" value="submit">
+				</form>
+			</div>
+			
+		</div>
+	</div>			
+</div>
+
+
+
+
+<script type="text/javascript" src="jquery.js">
+</script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		$('a').click(function(){
+			//alert("I am KUSHAL MATALIA");
+			var selected = $(this);
+			$('a').removeClass('active');
+			$(selected).addClass('active');
+		});
+
+		var $a = $('.a'),
+		$b = $('.b'),
+		$c = $('.c'),
+		$d = $('.d'),
+		$home = $('.home'),
+		$aboutme = $('.aboutme'),
+		$gallery = $('.gallery'),
+		$contactme = $('.contactme'),
+		$submit = $('.submitbutton');
+
+
+		$a.click(function(){
+			$home.fadeIn();
+			$aboutme.fadeOut();
+			$gallery.fadeOut();
+			$contactme.fadeOut();
+		});
+		$b.click(function(){
+			$home.fadeOut();
+			$aboutme.fadeIn();
+			$gallery.fadeOut();
+			$contactme.fadeOut();
+			$(".aboutme").css("display:block");
+		});
+
+		$c.click(function(){
+			$gallery.fadeIn();
+			$home.fadeOut();
+			$aboutme.fadeOut();
+			$contactme.fadeOut();
+		});
+		$d.click(function(){
+			$home.fadeOut();
+			$aboutme.fadeOut();
+			$gallery.fadeOut();
+			$contactme.fadeIn();
+		});
+
+		$submit.click(function(){
+			alert("Thank you for your response");
+		});
+	});
+
+
+
+
+
+</script>
+</body>
+</html>
